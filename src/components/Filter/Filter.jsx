@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import './Filter.module.css';
 
-export function Filter({ value, onChangeFilter }) {
+export function Filter({ value, changeFilterInput }) {
   return (
     <div>
       <label>
         Find contacts by name
-        <input type="text" value={value} onChange={onChangeFilter} />
+        <input type="text" value={value} onChange={changeFilterInput} />
       </label>
     </div>
   );
@@ -14,5 +14,5 @@ export function Filter({ value, onChangeFilter }) {
 
 Filter.propTypes = {
   value: PropTypes.string.isRequired,
-  onChangeFilter: PropTypes.func.isRequired,
+  changeFilterInput: PropTypes.func.isRequired,
 };
